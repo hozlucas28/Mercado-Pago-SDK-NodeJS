@@ -92,7 +92,6 @@ describe('buildError factory', () => {
 
 	test.each(cases)('status %i → %s', (status, Cls) => {
 		const err = buildError(status, { message: 'test' });
-		// eslint-disable-next-line @typescript-eslint/ban-types
 		expect(err).toBeInstanceOf(Cls as unknown as new (...args: unknown[]) => unknown);
 	});
 
