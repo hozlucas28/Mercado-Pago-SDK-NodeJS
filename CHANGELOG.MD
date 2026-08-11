@@ -1,5 +1,24 @@
 # Releases
 
+## VERSION 3.4.0 - 2026-08-11
+- feat(order): add Automatic Payments example — two-step recurring flow ([#454](https://github.com/mercadopago/sdk-nodejs/pull/454))
+- feat(order): add missing typed fields to `CreateOrderRequest` and related interfaces ([#454](https://github.com/mercadopago/sdk-nodejs/pull/454))
+- feat(order): add `transaction_security` to `OnlineConfigRequest`, fix `mode` values and `callback_url` ([#454](https://github.com/mercadopago/sdk-nodejs/pull/454))
+- fix(order): rename `prevTransactionRef` to `previousTransactionReference` in stored credential ([#454](https://github.com/mercadopago/sdk-nodejs/pull/454))
+- fix(pagination): support `data` key for Orders v2 API — Pattern C ([#454](https://github.com/mercadopago/sdk-nodejs/pull/454))
+- ci: standardize CI/CD workflows ([#465](https://github.com/mercadopago/sdk-nodejs/pull/465))
+- ci: add mock-based unit tests ([#465](https://github.com/mercadopago/sdk-nodejs/pull/465))
+
+## VERSION 3.3.0 - 2026-08-04
+- feat: SDK ergonomics — typed errors, configurable retry and auto-pagination ([#462](https://github.com/mercadopago/sdk-nodejs/pull/462)). `MercadoPagoError` now has 12 specific subtypes per HTTP status code. Request options gain optional `maxRetries`, `retryOn`, `initialDelayMs`, `maxDelayMs` and `onRetry` callback. New auto-pagination support on search endpoints.
+- feat: add missing API methods — `disbursementRefund.list()`, `advancedPayment.update()`, `customerCard.update()`, `payment.update()` ([#461](https://github.com/mercadopago/sdk-nodejs/pull/461))
+- feat: add CREDENTIAL_ON_FILE messaging fields to Payment types ([#457](https://github.com/mercadopago/sdk-nodejs/pull/457)): `firstTransaction`, `storage`, `transactionInitiator`, `reference`
+- fix: webhook `toleranceSeconds` unit mismatch ([#463](https://github.com/mercadopago/sdk-nodejs/pull/463))
+- fix: `constantTimeEquals` `RangeError` on multibyte v1 hash ([#463](https://github.com/mercadopago/sdk-nodejs/pull/463))
+- ci: upgrade dev dependencies and migrate to ESLint flat config ([#456](https://github.com/mercadopago/sdk-nodejs/pull/456))
+- Bump `actions/setup-node` to `v7.0.0` ([#460](https://github.com/mercadopago/sdk-nodejs/pull/460))
+- Bump `actions/checkout` to `v7.0.1` ([#455](https://github.com/mercadopago/sdk-nodejs/pull/455))
+
 ## VERSION 3.2.1 - 2026-07-22
 - Patch release: dependency updates and bug fixes.
 
