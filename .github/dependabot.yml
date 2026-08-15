@@ -35,6 +35,8 @@ updates:
     ignore:
       - dependency-name: "*"
         update-types: ["version-update:semver-major"]
+    cooldown:
+      default-days: 7
 
   # ── GitHub Actions (CI) ──────────────────────────────────────────────
   - package-ecosystem: "github-actions"
@@ -50,3 +52,5 @@ updates:
       - "ci"
     commit-message:
       prefix: "chore(ci)"
+    cooldown:
+      default-days: 7
